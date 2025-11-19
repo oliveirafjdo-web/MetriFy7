@@ -5,7 +5,7 @@
 <p>Envie o relatório oficial de <strong>Vendas BR</strong> do Mercado Livre (.xlsx), sem editar.</p>
 <p class="small">O sistema tenta encontrar o produto pelo <strong>SKU</strong>. Se o SKU estiver vazio, tenta pelo <strong>Título do anúncio = nome do produto</strong>.</p>
 
-<form action="{{ url_for('importar_ml') }}" method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="arquivo">Arquivo (.xlsx)</label>
     <input type="file" id="arquivo" name="arquivo" accept=".xlsx,.xls" required>
@@ -17,7 +17,7 @@
 
 <h2>Importar consolidação (Template)</h2>
 <p>Use a planilha de modelo preenchida manualmente (SKU, Título, Quantidade, Receita, Comissao, PrecoMedio).</p>
-<form method="post" action="{{ url_for('importar_ml') }}" enctype="multipart/form-data">
+<form method="post" action="{{ url_for('importar_template') }}" enctype="multipart/form-data">
   <div class="form-group">
     <label for="arquivo_template">Arquivo do template (.xlsx)</label>
     <input type="file" id="arquivo_template" name="arquivo_template" accept=".xlsx,.xls" required>

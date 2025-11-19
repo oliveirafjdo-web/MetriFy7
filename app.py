@@ -637,7 +637,7 @@ def excluir_lote_vendas(lote_id):
 
 # ---------------- IMPORT / EXPORT ----------------
 @app.route("/importar_ml", methods=["GET", "POST"])
-def importar_ml_view():
+def importar_ml():
     if request.method == "POST":
         if "arquivo" not in request.files:
             flash("Nenhum arquivo enviado.", "danger")
